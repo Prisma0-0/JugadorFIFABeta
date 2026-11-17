@@ -6,35 +6,35 @@ public class Jugador extends Persona {
     public Posicion posicion;
     private LocalDate nacimiento;
 
+    public Jugador(){
+    }
+
+    public Jugador(String nombre, LocalDate nacimiento){
+        this.name = nombre;
+        this.nacimiento = nacimiento;
+    }
+
+    public LocalDate getNacimiento() {
+        return nacimiento;
+    }
+
     public void setNacimiento(LocalDate nacimiento) {
         this.nacimiento = nacimiento;
     }
 
-    public int getEdad()
-    {
-         return Period.between(
-                nacimiento,
-                LocalDate.now()
-        ).getYears();
-
+    public int getEdad() {
+        if (nacimiento == null){
+            return 0;
+        }
+         return Period.between(nacimiento, LocalDate.now()).getYears();
     }
-
 
     @Override
     public String toString() {
         return "Jugador{" +
                 "dorsal=" + dorsal +
-                "} "
-                + super.toString();
+                ",posicion=" + posicion +
+                "} " + super.toString();
     }
 
-
-    public Jugador(String nombre, LocalDate nacimiento)
-    {
-        super.name=nombre;
-        nacimiento=this.nacimiento;
-    }
-
-    public Jugador()
-    {}
 }

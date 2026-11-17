@@ -12,6 +12,14 @@ public class Persona {
         this.country=newCountry;
     }
 
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String newId) {
+        this.id = newId;
+    }
+
     @Override
     public String toString() {
         return "Persona{" +
@@ -20,8 +28,4 @@ public class Persona {
                 ", is_alive=" + is_alive +
                 '}';
     }
-
-
-
-
 }
