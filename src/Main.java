@@ -16,7 +16,7 @@ public class Main {
         int opcion;
         do {
             mostrarMenu();
-            opcion = leerEntero("Que va a hacer manito?");
+            opcion = leerEntero("Que, va a hacer manito?");
             switch (opcion){
                 case 1:
                     crearJugador();
